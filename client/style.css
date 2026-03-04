@@ -77,3 +77,29 @@ h1 {
   color: #000;
 }
 
+
+/* ── Event Cards ─────────────────────────────────────────── */
+#main-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.event-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  width: 260px;
+}
+
+.event-card h2 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+}
+
+.event-card p {
+  margin: 0.2rem 0;
+  font-size: 0.875rem;
+  color: #555;
+}
