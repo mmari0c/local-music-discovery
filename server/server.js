@@ -6,8 +6,16 @@ const app = express();
 app.use('/public', express.static('./public'))
 app.use('/music-events', musicEventsRouter)
 
-app.get('/', (req, res) => {
-   res.status(200).send('<h1 style="text-align: center; margin-top: 50px;">Welcome to the Local Music Discovery API</h1>')
+app.get('/', (_req, res) => {
+   res.sendFile('./public/index.html', { root: '.' })
+})
+
+app.get('/events/:id', (_req, res) => {
+   res.sendFile('./public/event.html', { root: '.' })
+})
+
+app.get('/404', (_req, res) => {
+   res.status(404).sendFile('./public/404.html', { root: '.' })
 })
 
 const PORT = process.env.PORT || 3001;

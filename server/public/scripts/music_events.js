@@ -14,6 +14,7 @@ const renderEvents = async () => {
             <p>${event.location}</p>
             <p>${event.genre}</p>
             <p>$${event.ticket_price}</p>
+            <a href="/event.html?id=${event.id}">View Details</a>
          `
          mainContent.appendChild(card)
       })
@@ -24,4 +25,10 @@ const renderEvents = async () => {
    }
 }
 
-renderEvents()
+const requestedURL = window.location.href.split('/').pop()
+
+if(requestedURL) {
+   window.location.href = '../404.html'
+} else {
+   renderEvents()
+}
