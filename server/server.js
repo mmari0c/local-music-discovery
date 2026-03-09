@@ -1,4 +1,5 @@
 import express from 'express';
+import './config/dotenv.js'
 import musicEventsRouter from './routes/music_events.js'
 
 const app = express();
