@@ -16,7 +16,7 @@ function createHeader() {
 
   const brandText = document.createElement("h1");
   brandText.className = "header-brand-text";
-  brandText.textContent = "Local Music Discovery";
+  brandText.textContent = "Denton Music Discovery";
 
   brand.appendChild(icon);
   brand.appendChild(brandText);
